@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
 import Authentication from "./Authentication";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Navigation from "./Navigation";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function Home() {
   return (
@@ -35,12 +38,14 @@ function App() {
   const [user, setUser] = React.useState({});
   return (
     <Router>
-      <Navigation />
+      {/* <Navigation /> */}
       <Route exact path="/" component={Home} />
       <Route
         exact
         path="/auth"
-        render={(props) => <Authentication {...props} setUser={setUser} />}
+        render={(props) => (
+          <Authentication {...props} setUser={setUser} />
+        )}
       />
       <Route
         exact

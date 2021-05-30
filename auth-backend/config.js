@@ -1,3 +1,5 @@
+const user = "sohail";
+const user_password = "sohail123";
 const config = {
   production: {
     SECRET: process.env.SECRET,
@@ -5,7 +7,7 @@ const config = {
   },
   default: {
     SECRET: "HelloWelloDello",
-    DATABASE: "mongodb://localhost:27017/learninggate",
+    DATABASE: `mongodb+srv://${user}:${user_password}@cluster0.wnkoq.mongodb.net/Auth?retryWrites=true&w=majority`,
   },
 };
 
